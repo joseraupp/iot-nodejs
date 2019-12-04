@@ -1,15 +1,8 @@
 {
-  "name": "@wiotp/sdk",
-  "version": "0.6.0",
-  "description": "SDK for developing device, gateway, and application clients for IBM Watson IoT Platform",
-  "main": "index.js",
-  "files": [
-    "src",
-    "index.js",
-    "package.json",
-    "README.md",
-    "LICENCE"
-  ],
+  "name": "plurilock-watson-sdk",
+  "version": "0.0.1",
+  "description": "Just a node compiled version of - SDK for developing device, gateway, and application clients for IBM Watson IoT Platform",
+  "main": "dist/index.js",
   "publishConfig": {
     "access": "public"
   },
@@ -30,6 +23,7 @@
   "devDependencies": {
     "@babel/cli": "7.4.4",
     "@babel/core": "7.4.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.4",
     "@babel/preset-env": "7.4.4",
     "@babel/register": "7.4.4",
     "@cloudant/cloudant": "^2.1.0",
@@ -45,7 +39,8 @@
   },
   "scripts": {
     "clean": "rimraf dist/*",
-    "build:commonjs": "babel src --out-dir dist --modules umd",
+    "build:umd": "babel src --out-dir dist --modules umd",
+    "build:commonjs": "babel src --out-dir dist ",
     "build": "npm run clean && npm run build:commonjs",
     "test": "mocha --require @babel/register --require mocha-steps",
     "test-cov": "nyc --reporter=lcov --reporter=text-summary mocha --require mocha-steps",
@@ -59,11 +54,15 @@
     {
       "name": "Bryan Boyd",
       "email": "bboyd@us.ibm.com"
+    },
+    {
+      "name": "Jose Raupp da Rosa Junior",
+      "email": "jose.raupp@plurilock.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ibm-watson-iot/iot-nodejs.git"
+    "url": "git+https://github.com/joseraupp/iot-nodejs.git"
   },
   "license": "EPL-1.0",
   "nyc": {
