@@ -10,7 +10,7 @@
 ## Installation
 
 ```
-npm install plurilock-watson-sdk --save
+npm install plurilock-watson --save
 ```
 
 
@@ -19,7 +19,7 @@ npm install plurilock-watson-sdk --save
 ### Application
 
 ```javascript
-const {ApplicationClient, ApplicationConfig} = require('plurilock-watson-sdk');
+const {ApplicationClient, ApplicationConfig} = require('plurilock-watson');
 
 let appConfig = ApplicationConfig.parseEnvVars();
 let appClient = new ApplicationClient(appConfig);
@@ -31,7 +31,7 @@ appClient.disconnect();
 ### Device
 
 ```javascript
-const {DeviceClient, DeviceConfig} = require('plurilock-watson-sdk');
+const {DeviceClient, DeviceConfig} = require('plurilock-watson');
 
 let deviceConfig = DeviceConfig.parseEnvVars();
 let deviceClient = new DeviceClient(deviceConfig);
@@ -43,7 +43,7 @@ deviceClient.disconnect();
 ### Gateway
 
 ```javascript
-const {GatewayClient, GatewayConfig} = require('plurilock-watson-sdk');
+const {GatewayClient, GatewayConfig} = require('plurilock-watson');
 
 let gwConfig = GatewayConfig.parseEnvVars();
 let gwClient = new GatewayClient(gwConfig);

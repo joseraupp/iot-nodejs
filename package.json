@@ -1,5 +1,5 @@
 {
-  "name": "plurilock-watson-sdk",
+  "name": "plurilock-watson",
   "version": "0.0.1",
   "description": "Just a node compiled version of - SDK for developing device, gateway, and application clients for IBM Watson IoT Platform",
   "main": "dist/index.js",
