@@ -10,7 +10,7 @@
 ## Installation
 
 ```
-npm install @wiotp/sdk --save
+npm install plurilock-watson-sdk --save
 ```
 
 
@@ -19,7 +19,7 @@ npm install @wiotp/sdk --save
 ### Application
 
 ```javascript
-import {ApplicationClient, ApplicationConfig} from '@wiotp/sdk';
+const {ApplicationClient, ApplicationConfig} = require('plurilock-watson-sdk');
 
 let appConfig = ApplicationConfig.parseEnvVars();
 let appClient = new ApplicationClient(appConfig);
@@ -31,7 +31,7 @@ appClient.disconnect();
 ### Device
 
 ```javascript
-import {DeviceClient, DeviceConfig} from '@wiotp/sdk';
+const {DeviceClient, DeviceConfig} = require('plurilock-watson-sdk');
 
 let deviceConfig = DeviceConfig.parseEnvVars();
 let deviceClient = new DeviceClient(deviceConfig);
@@ -43,7 +43,7 @@ deviceClient.disconnect();
 ### Gateway
 
 ```javascript
-import {GatewayClient, GatewayConfig} from '@wiotp/sdk';
+const {GatewayClient, GatewayConfig} = require('plurilock-watson-sdk');
 
 let gwConfig = GatewayConfig.parseEnvVars();
 let gwClient = new GatewayClient(gwConfig);
